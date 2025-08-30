@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnteatAir</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            /* 100% of viewport height */
+        }
+
+        main {
+            flex: 1;
+            /* grows to fill space between header/navbar and footer */
+            padding: 3rem 10%;
+        }
+
+        header {
+            background: #004080;
+            color: white;
+            padding: 2rem;
+            padding-bottom: 0rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        section {
+            padding: 3rem 10%;
+        }
+
+        h2 {
+            color: #004080;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            position: sticky;
+            /* keeps it in place even when scrolling */
+            top: 0;
+            /* stick to the top of the page */
+            left: 0;
+            /* start from the left edge */
+            width: 100%;
+            /* span full width */
+            background: #004080;
+            color: white;
+            padding: 1rem;
+            z-index: 1000;
+            /* ensures it stays above other content */
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul {
+            list-style: none;
+            /* remove bullets */
+            margin: 0;
+            /* remove default margin */
+            padding: 0;
+            /* remove default padding */
+            display: flex;
+            /* horizontal layout */
+            gap: 2rem;
+            /* space between links */
+        }
+
+        nav a {
+            color: white;
+        }
+
+        nav a.active {
+            font-weight: bold;
+            /* make the text bold */
+        }
+
+        .about,
+        .skills,
+        .contact,
+        .project-description,
+        .text-wrapper {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .image-wrapper {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            place-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .image-wrapper img,
+        video {
+            height: 40vh;
+            width: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project h3,
+        .text-wrapper h3,
+        .text-wrapper ul {
+            margin-bottom: 0.5rem;
+        }
+
+        .header-image {
+            padding: 0;
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .image-wrapper p {
+            text-align: center;
+        }
+
+        .image-wrapper div{
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+        }
+
+        .image-wrapper video, img{
+            margin-bottom: 0.5rem;
+        }
+
+        .caption {
+            font-style: italic;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #004080;
+            color: white;
+        }
+
+        a {
+            color: #004080;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Gavin Fujimoto</h1>
+        <p>Aviation Enthusiast and Aerospace Engineer</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="header-image">
+            <img src="images/anteatair-1.jpg" alt="AnteatAir - Image 1">
+        </section>
+        <section class="project-description">
+            <h2>AnteatAir</h2>
+            <div class="text-wrapper">
+                <h3>Overview</h3>
+                <p>
+                    Design/Build/Fly is an annual competition hosted by the American Institute of Aeronautics and
+                    Astronautics where participating universities design an RC aircraft to meet specific design criteria
+                    described by a ruleset released in August and attend a fly-off held in either Wichita, Kansas or
+                    Tucson, Arizona in April.
+                    The 2024-2025 competition presented two unique design challenges: the inclusion of detachable
+                    wing-mounted payloads and the deployment of a glider into a designated target area.
+                    I'd wager the Design/Build/Fly team at UC Irvine faced a third challenge: a concerning lack of
+                    returning members.
+                    Many of the experienced members from the previous year graduated, leaving a team of mostly new
+                    members.
+                    Without anybody else to lead the way, I took on the role of project manager without knowing what it
+                    entailed. The road ahead was uncertain, but I was determined to navigate it for the sake of the
+                    team.
+                    Throughout weeks and weeks of late nights, long meetings, and a fair share of setbacks, I helped
+                    build a plane that made it all the way to the skies of Tucson, Arizona.
+                    More importantly, I helped build a team that I am proud to be a part of.
+                </p>
+            </div>
+            <div class="image-wrapper">
+                <img src="images/anteatair-2.jpg" alt="AnteatAir - Image 2">
+                <img src="images/anteatair-3.jpg" alt="AnteatAir - Image 3">
+                <img src="images/anteatair-4.jpg" alt="AnteatAir - Image 4">
+            </div>
+            <div class="text-wrapper">
+                <h3>Design</h3>
+                <p>
+                    Unlike some of my personal projects, the design of AnteatAir was strictly governed by the
+                    competition ruleset.
+                    These rules determined the maximum wingspan, allowable configurations, electronics setup, and other
+                    design parameters.
+                    Most notably, the performance of the aircraft was evaluated based on scoring equations tied to each
+                    mission.
+                    These equations factored in elements such as payload weight, laps flown, and glider accuracy to
+                    provide an overall score used to determine the top-placing teams.
+                    One mission was heavily weighted towards the maximum weight the aircraft could carry using
+                    wing-mounted payloads, while another prioritized the weight of the glider and its accuracy in
+                    hitting a target.
+                    A combination of hand calculations, optimization scripts, simulations, and real flight tests were
+                    used to arrive at a final design.
+                </p>
+                <p>
+                    The final design was a 6-ft wingspan, 10-inch chord, mid-wing conventional aircraft with a tricycle
+                    configuration landing gear.
+                    The aircraft was powered by a 4500mAh 6s LiPo battery, a SunnySky X4130-8 380kV motor, and an 18x10E
+                    propeller.
+                    The wings, tails, and fuselage were constructed using built-up balsa with plywood and carbon fiber
+                    reinforcements.
+                    The wings were detachable to facilitate transportation and access panels were incorporated into the
+                    fuselage for battery and electronics access.
+                    The wing-mounted payloads were plastic soda bottles attached using a custom 3D-printed mounting
+                    system for rapid installation and removal.
+                    The glider was a modified off-the-shelf foam glider with fixed control surfaces to initiate an
+                    controlled descent pattern and an onboard LED-system for visbility.
+                    The glider was released using an internal servo-actuated mechanism connected to hooks on the
+                    glider's underside.
+                </p>
+            </div>
+            <div class="text-wrapper">
+                <h3>Specifications/Performance</h3>
+                <p>
+                    (SAE units per the competition rules.)
+                <ul>
+                    <li>Wingspan: 72 in</li>
+                    <li>Length: 57.25 in</li>
+                    <li>Empty Weight: 6.135 lb</li>
+                    <li>Max Takeoff Weight: 15.08 lb</li>
+                </ul>
+                <ul>
+                    <li>Motor: SunnySky X4130-8 380kV</li>
+                    <li>ESC: Phoenix Edge Lite 100A</li>
+                    <li>Propeller: APC 18 x 10E</li>
+                    <li>Battery: Tattu 4500mAh 6s 25C 22.2V LiPo </li>
+                </ul>
+                <ul>
+                    <li>Stall Speed: 20.29 - 30.55 ft/s</li>
+                    <li>Cruise Speed: 74.09 - 84.33 ft/s</li>
+                    <li>Flight Time: 4.7 min</li>
+                </ul>
+                <ul>
+                    <li>Max Payload: 9 lbs</li>
+                    <li>Max # of Laps: 5</li>
+                    <li>Mission Staging Time: 24 s</li>
+                </ul>
+                </p>
+            </div>
+            <div class="image-wrapper">
+                <div>
+                    <img src="images/anteatair-5.jpg" alt="AnteatAir - Image 5">
+                    <p>
+                        Scoring sensitivity analysis
+                    </p>
+                </div>
+                <div>
+                    <img src="images/anteatair-6.jpg" alt="AnteatAir - Image 6">
+                    <p>
+                        Dynamic stability root locus
+                    </p>
+                </div>
+                <div>
+                    <img src="images/anteatair-7.jpg" alt="AnteatAir - Image 7">
+                    <p>
+                        XFLR5 lift study
+                    </p>
+                </div>
+            </div>
+            <div class="text-wrapper">
+                <h3>Aerodynamics</h3>
+                <p>
+                    As the aerodynamics lead, I was responsible for the aerodynamic design and analysis of the aircraft.
+                    I performed scoring analysis, preliminary sizing, and performance validation using a combination of
+                    hand calculations, MATLAB scripts, and XFLR5 simulations.
+                    I developed an optimization program in MATLAB that combined the scoring equations with early
+                    performance estimates and aerodynamic equations to determine the highest-scoring balance of design
+                    parameters.
+                    A separate sensitivity analysis graphically compared the relative impact of variations in each of
+                    the design parameters to validate the optimization results.
+                    The initial aircraft was sized based off of these results and techniques described in rudimentary
+                    aircraft design textbooks.
+                    XFLR5 was used to simulate the aircraft's aerodynamic performance and stability characteristics,
+                    allowing for changes to the airfoil selection, wing geometry, and tail sizing prior to building a
+                    physical prototype.
+                    Flight testing allowed for real-world performance validation and final adjustments to further
+                    increase performance.
+                </p>
+            </div>
+            </div>
+            <div class="text-wrapper">
+                <h3>Project Management</h3>
+                <p>
+                    Although I picked up a lot of technical skills throughout the year, I think my greatest takeaway is
+                    how much effort it takes to be a good leader.
+                    As project manager, I handled meetings, budgeting, scheduling, task delegation, communication with
+                    advisors, and any unexpected issues that arose along the way.
+                    Early on, I struggled to find my footing in this new role. At the first meeting, I faced a room full
+                    of new members who were unsure of what to expect, and I was unsure of what to deliver.
+                    My mind was focused on how much time it would take to build a plane and not on how to build a
+                    lasting team.
+                    I spent too much time doing things by myself, and I felt the consequences. I burned out and spiraled
+                    into feelings of inadequacy, self-doubt, and frustration.
+                    It wasn't until I took a step back and take a moment to breathe that I was able to turn things
+                    around.
+                    The team came first, and results would follow. During crunch time, I stepped away completely from
+                    any hands-on work and focused entirely on keeping the team organized, motivated, and on track.
+                    Before I knew it, we were on our way to Tucson, on a journey I'd be hard-pressed to forget.
+                </p>
+            </div>
+            <div class="text-wrapper">
+                <h3>Results</h3>
+                <p>
+                    I'd love to talk about producing great results, but that was far from reality. We placed 59th of 112
+                    competing teams, completing only two of the four missions.
+                    The road was riddled with too many mistakes, many of which were my own. Yet, I am hopeful for the
+                    future of the team and for good reason;
+                    this year we have seventeen returning members, each with far more experience in the project than my
+                    past self.
+                    We're already making smarter decisions and working harder to make this year better than the last.
+                </p>
+            </div>
+            <div class="image-wrapper">
+                <div>
+                    <video controls>
+                        <source src="videos\anteatair-8.mp4" type="video/mp4">
+                    </video>
+                    <p>Test flight glider deployment</p>
+                </div>
+                <div>
+                    <video controls>
+                        <source src="videos\anteatair-9.mp4" type="video/mp4">
+                    </video>
+                    <p>Mission 1 flight</p>
+                </div>
+            </div>
+            <div class="text-wrapper">
+                <h3>Documentation</h3>
+                <p>
+                    For more information on the project, please refer to the following documents:
+                <ul>
+                    <li><a href="documents/Rules_2025.pdf" target="_blank">2024-2025 Design/Build/Fly Rules</a></li>
+                    <li><a href="documents\2024DBF_University_of_California_Irvine_PROPOSAL.pdf"
+                            target="_blank">Proposal</a></li>
+                    <li><a href="documents\2025DBF_University_of_California_Irvine_DESIGN_REPORT.pdf"
+                            target="_blank">Design Report</a></li>
+                </ul>
+                </p>
+            </div>
+        </section>
+
+
+
+        <!--
+    <section>
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Sub-250g RC Airplane</h3>
+                <p>Designed and built a lightweight Slow Stick-inspired aircraft for endurance and portability.</p>
+            </div>
+            <div class="project">
+                <h3>Pneumatic Robot</h3>
+                <p>Developed a class project robot powered by pneumatics, showcasing control and actuation design.</p>
+            </div>
+            <div class="project">
+                <h3>Mission Performance Optimizer</h3>
+                <p>Built a MATLAB tool to optimize aircraft missions, balancing fuel, speed, and endurance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <p><strong>Software:</strong> MATLAB, SolidWorks, XFLR5, Python, C++</p>
+        <p><strong>Hardware:</strong> RC Aircraft, Arduino, Pneumatics, Prototyping</p>
+    </section>
+
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p>LinkedIn: <a href="#">linkedin.com/in/yourname</a></p>
+        <p>GitHub: <a href="#">github.com/yourusername</a></p>
+    </section>
+-->
+    </main>
+
+    <footer>
+        <p>Gavin Fujimoto | Engineering Portfolio</p>
+    </footer>
+
+</body>
+
+</html>

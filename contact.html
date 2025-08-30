@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+       body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            /* 100% of viewport height */
+        }
+
+        main {
+            flex: 1;
+            /* grows to fill space between header/navbar and footer */
+            padding: 3rem 10%;
+        }
+
+        header {
+            background: #004080;
+            color: white;
+            padding: 2rem;
+            padding-bottom: 0rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        section {
+            padding: 3rem 10%;
+        }
+
+        h2 {
+            color: #004080;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            position: sticky;
+            /* keeps it in place even when scrolling */
+            top: 0;
+            /* stick to the top of the page */
+            left: 0;
+            /* start from the left edge */
+            width: 100%;
+            /* span full width */
+            background: #004080;
+            color: white;
+            padding: 1rem;
+            z-index: 1000;
+            /* ensures it stays above other content */
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul {
+            list-style: none;
+            /* remove bullets */
+            margin: 0;
+            /* remove default margin */
+            padding: 0;
+            /* remove default padding */
+            display: flex;
+            /* horizontal layout */
+            gap: 2rem;
+            /* space between links */
+        }
+
+        nav a {
+            color: white;
+        }
+
+        nav a.active {
+            font-weight: bold;
+            /* make the text bold */
+        }
+
+        .about,
+        .skills,
+        .contact {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #004080;
+            color: white;
+        }
+
+        a {
+            color: #004080;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Gavin Fujimoto</h1>
+        <p>Aviation Enthusiast and Aerospace Engineer</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" >Projects</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+<!--
+    <section>
+        <div class="projects">
+            <div class="project">
+                <h3>Sub-250g RC Airplane</h3>
+                <p>Designed and built a lightweight Slow Stick-inspired aircraft for endurance and portability.</p>
+            </div>
+            <div class="project">
+                <h3>Pneumatic Robot</h3>
+                <p>Developed a class project robot powered by pneumatics, showcasing control and actuation design.</p>
+            </div>
+            <div class="project">
+                <h3>Mission Performance Optimizer</h3>
+                <p>Built a MATLAB tool to optimize aircraft missions, balancing fuel, speed, and endurance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <p><strong>Software:</strong> MATLAB, SolidWorks, XFLR5, Python, C++</p>
+        <p><strong>Hardware:</strong> RC Aircraft, Arduino, Pneumatics, Prototyping</p>
+    </section>
+-->
+
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:gavfuji@gmail.com">gavfuji@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/gavin-fujimoto" target="_blank">linkedin.com/in/gavin-fujimoto</a></p>
+    </section>
+</main>
+
+    <footer>
+        <p>Gavin Fujimoto | Engineering Portfolio</p>
+    </footer>
+
+</body>
+
+</html>

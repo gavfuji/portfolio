@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            /* 100% of viewport height */
+        }
+
+        main {
+            flex: 1;
+            /* grows to fill space between header/navbar and footer */
+            padding: 3rem 10%;
+        }
+
+        header {
+            background: #004080;
+            color: white;
+            padding: 2rem;
+            padding-bottom: 0rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        section {
+            padding: 3rem 10%;
+        }
+
+        h2 {
+            color: #004080;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            position: sticky;
+            /* keeps it in place even when scrolling */
+            top: 0;
+            /* stick to the top of the page */
+            left: 0;
+            /* start from the left edge */
+            width: 100%;
+            /* span full width */
+            background: #004080;
+            color: white;
+            padding: 1rem;
+            z-index: 1000;
+            /* ensures it stays above other content */
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul {
+            list-style: none;
+            /* remove bullets */
+            margin: 0;
+            /* remove default margin */
+            padding: 0;
+            /* remove default padding */
+            display: flex;
+            /* horizontal layout */
+            gap: 2rem;
+            /* space between links */
+        }
+
+        nav a {
+            color: white;
+        }
+
+        nav a.active {
+            font-weight: bold;
+            /* make the text bold */
+        }
+
+        .about,
+        .skills,
+        .contact,
+        .opening,
+        .technical-skills,
+        .soft-skills {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .technical-skills {
+              flex: 8 1 300px;    /* grow:3, shrink:1, base width:300px */
+        }
+
+        .soft-skills {
+              flex: 1 1 200px;    /* grow:1, shrink:1, base width:200px */
+        }
+
+        .split div {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .split img {
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .projects,
+        .split {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .skills-split {
+            display: flex;
+            flex-wrap:wrap;
+            gap: 1.5rem;
+        }
+
+        .project {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .about ol,
+        .about ul, .skills ul {
+            margin-top: 1rem;
+            margin-left: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .about li {
+            margin-bottom: 1rem;
+        }
+
+        .about p {
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #004080;
+            color: white;
+        }
+
+        a {
+            color: #004080;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .skill {
+            width: 100%;
+            /* set max width */
+            margin: 20px auto;
+            /* center horizontally */
+            text-align: left;
+            /* center the text */
+            font-family: sans-serif;
+            margin: 0;
+            margin-bottom: 1rem;
+        }
+
+        .skill-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .skill-bar {
+            background: #ddd;
+            /* background of the bar */
+            border-radius: 10px;
+            overflow: hidden;
+            height: 20px;
+            width: 100%;
+            /* bar thickness */
+        }
+
+        .skill-progress {
+            background: #4caf50;
+            /* progress color */
+            height: 100%;
+            width: 0%;
+            /* default, overridden inline */
+            transition: width 0.5s ease;
+            /* smooth animation */
+        }
+
+        .skill-level {
+            text-align: right;
+            margin-top: 5px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Gavin Fujimoto</h1>
+        <p>Aviation Enthusiast and Aerospace Engineer</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="about">
+            <h2>About Me</h2>
+            <div class="opening">
+            <p>Let's start with the important stuff. No-frills, excuses, or lofty promises. I give my everything to the things
+                that matter to me and look at the long-term to shape the short-term. </p>
+            <p>This means three things: </p>
+            <ol>
+                <li>
+                    <h4>I'm accountable.</h4>
+                    <p>If I make a mistake, I'm always ready to take the fault. It is by learning from mistakes that I
+                        improve myself and become more valuable as a person.</p>
+                </li>
+                <li>
+                    <h4>I'm reliable.</h4>
+                    <p>I don't do things without knowing what's in it for me. That doesn't mean fame, wealth, or other
+                        material goods, but unique experiences or opportunities to learn and grow.
+                        This means that if I commit to a task, you can count on me to follow through because I know I
+                        have something to gain from it.
+                    </p>
+                </li>
+                <li>
+                    <h4>I'm communicative.</h4>
+                    <p>If I see a problem, I will bring it up even if I caused it (see "accountable").
+                        I'm not afraid to admit I'm wrong or confused because staying silent doesn't make me any less
+                        wrong or confused.
+                        I'm not afraid to discuss issues because I undertand the success of the team is independent of
+                        our emotions.
+                        I've seen the difference between good and bad communication and I know which one causes a lot
+                        fewer headaches for everyone involved.</p>
+                </li>
+            </ol>
+            </div>
+            <div class="split">
+                <div>
+                    <h3>I'm Gavin,</h3>
+                    <p>a 4th year mechanical and aerospace engineering student at the University of California, Irvine.
+                        I want to make a difference without relying on anything other than what I bring to the table.</p>
+                    <p>Over the past few years, I've held a few roles I'm grateful to have taken on. These include: </p>
+                    <ul>
+                        <li>Project Manager for Design/Build/Fly at UCI</li>
+                        <li>Finance Director for the American Society of Engineering at UCI</li>
+                        <li>Teaching Assistant for the UC California State Summer School for Mathematics & Science</li>
+                    </ul>
+                    <p>In each of these roles, I learned something new about the world of engineering, whether it be
+                        about leadership and management, event organization and finances, or inspiring the next
+                        generation of promising talent.
+                        Such experiences motivate me to overcome the toughest challenges and seek out opportunities to
+                        be a part of something unforgettable.
+                    </p>
+                    <p>In my free time, I love trying new things. A recent hobby I've picked up is
+                        building and flying RC aircraft with a local soaring club.
+                        Otherwise, I'm typically out at the gym, hanging out with my friends, or getting caught up in a
+                        "side" project that's way over my head (e.g. this website).</p>
+                </div>
+                <img src="images\self.jpg" alt="Picture of Gavin Fujimoto">
+            </div>
+        </section>
+
+        <!--
+    <section>
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Sub-250g RC Airplane</h3>
+                <p>Designed and built a lightweight Slow Stick-inspired aircraft for endurance and portability.</p>
+            </div>
+            <div class="project">
+                <h3>Pneumatic Robot</h3>
+                <p>Developed a class project robot powered by pneumatics, showcasing control and actuation design.</p>
+            </div>
+            <div class="project">
+                <h3>Mission Performance Optimizer</h3>
+                <p>Built a MATLAB tool to optimize aircraft missions, balancing fuel, speed, and endurance.</p>
+            </div>
+        </div>
+    </section>
+-->
+
+        <section class="skills">
+            <h2>Skills</h2>
+            <div class="skills-split">
+                <div class="soft-skills">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Project Management</li>
+                        <li>Communication</li>
+                        <li>Resourcefulness</li>
+                        <li>Organization</li>
+                    </ul>
+                </div>
+                <div class="technical-skills">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-name">Solidworks</div>
+
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+
+                    <div class="skill-level">Advanced</div>
+
+                <div class="skill">
+                    <div class="skill-name">Matlab</div>
+
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 60%;"></div>
+                    </div>
+
+                    <div class="skill-level">Intermediate</div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">Ansys</div>
+
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 50%;"></div>
+                    </div>
+
+                    <div class="skill-level">Intermediate</div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">Python</div>
+
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 30%;"></div>
+                    </div>
+
+                    <div class="skill-level">Basic</div>
+                </div>
+            </div>
+            </div>
+
+        </section>
+
+        <!--
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p>LinkedIn: <a href="#">linkedin.com/in/yourname</a></p>
+        <p>GitHub: <a href="#">github.com/yourusername</a></p>
+    </section>
+-->
+    </main>
+
+    <footer>
+        <p>Gavin Fujimoto | Engineering Portfolio</p>
+    </footer>
+
+</body>
+
+</html>

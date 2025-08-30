@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wing</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            /* 100% of viewport height */
+        }
+
+        main {
+            flex: 1;
+            /* grows to fill space between header/navbar and footer */
+            padding: 3rem 10%;
+        }
+
+        header {
+            background: #004080;
+            color: white;
+            padding: 2rem;
+            padding-bottom: 0rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        section {
+            padding: 3rem 10%;
+        }
+
+        h2 {
+            color: #004080;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            position: sticky;
+            /* keeps it in place even when scrolling */
+            top: 0;
+            /* stick to the top of the page */
+            left: 0;
+            /* start from the left edge */
+            width: 100%;
+            /* span full width */
+            background: #004080;
+            color: white;
+            padding: 1rem;
+            z-index: 1000;
+            /* ensures it stays above other content */
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul {
+            list-style: none;
+            /* remove bullets */
+            margin: 0;
+            /* remove default margin */
+            padding: 0;
+            /* remove default padding */
+            display: flex;
+            /* horizontal layout */
+            gap: 2rem;
+            /* space between links */
+        }
+
+        nav a {
+            color: white;
+        }
+
+        nav a.active {
+            font-weight: bold;
+            /* make the text bold */
+        }
+
+        .about,
+        .skills,
+        .contact,
+        .project-description,
+        .text-wrapper {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .image-wrapper {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            place-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .image-wrapper img {
+            height: 40vh;
+            width: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project h3,
+        .text-wrapper h3,
+        .text-wrapper ul {
+            margin-bottom: 0.5rem;
+        }
+
+        .header-image {
+            padding: 0;
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #004080;
+            color: white;
+        }
+
+        a {
+            color: #004080;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Gavin Fujimoto</h1>
+        <p>Aviation Enthusiast and Aerospace Engineer</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="header-image">
+            <img src="images/the-wing-1.jpg" alt="The Wing - Image 1">
+        </section>
+        <section class="project-description">
+            <h2>The Wing</h2>
+
+            <div class="text-wrapper">
+                <h3>Overview</h3>
+                <p>
+                    The Wing is a 1000mm span, sub-250g flying wing park flyer.
+                    This aircraft features a fully foam structure and a more powerful motor for more advanced piloting.
+                </p>
+                <p>
+                    The Wing is still a work in progress, with planned changes to improve handling and structural
+                    integrity.
+                </p>
+            </div>
+            <div class="text-wrapper">
+                <h3>Design</h3>
+                <p>
+                    The goal of The Wing was to design a lightweight, fun-to-fly aircraft using a single foam board as
+                    the primary construction material. While the aircraft has fewer parts than other designs (see <a
+                        href="The_Stick.html">The Stick</a>), the flying wing configuration presents unique design
+                    challenges, particularly in stability and control.
+                    The aircraft uses elevons for pitch and roll control, with endplates for yaw stability and a
+                    moderate sweep to shift the center of gravity backwards to improve handling characteristics.
+                    The wings feature a KFm-2 airfoil from the root to improve lift and stall characteristics,
+                    transitioning to a flat plate airfoil at the tips to simplify construction and reduce weight.
+                    The mount is 3D-printed to ensure the motor remains secure during flight.
+                </p>
+                <p>
+                    Wing area was determined by using the lift equation and a stall speed of ~5 m/s at the maximum
+                    allowable weight of 250g.
+                    Endplate and control surface sizing sizing was approximated as a percentage of the wing area based
+                    on existing designs and
+                    adjusted through flight testing.
+                    The motor and propeller were selected to maximize thrust without overheating.
+                </p>
+            </div>
+            <div class="text-wrapper">
+                <h3>Specifications</h3>
+                <p>
+                <ul>
+                    <li>Wingspan: 1000mm</li>
+                    <li>Length: 350mm</li>
+                    <li>Weight: 235g (with battery)</li>
+                </ul>
+                <ul>
+                    <li>Motor: 2305 2800kV</li>
+                    <li>ESC: 40A</li>
+                    <li>Propeller: 6x4E</li>
+                    <li>Battery: 2S 650mAh LiPo</li>
+                </ul>
+                <ul>
+                    <li>Stall Speed: 4.0 m/s</li>
+                    <li>Cruise Speed: 7.5 m/s</li>
+                    <li>Max Speed (burst): 21.3 m/s</li>
+                    <li>Flight Time: ~8 minutes</li>
+                </ul>
+                </p>
+            </div>
+            <div class="text-wrapper">
+                <h3>Future Plans</h3>
+                <p>
+                    Since this was my first flying wing design, there were several issues that I plan to address in
+                    future iterations of the aircraft.
+                    Although the wing was reinforced spanwise using unidirectional tape, the foam did not hold up well
+                    under lift forces and after crashes.
+                    I plan to redesign the aircraft using a smaller aspect ratio to improve structural integrity and
+                    make the aircraft easier to launch by hand.
+                    For similar reasons, the control surfaces were less effective than originally estimated.
+                    The foam warped mid-flight to counteract the movement of the elevons. The redesign will include
+                    larger control surfaces and a more rigid construction.
+                </p>
+            </div>
+        </section>
+
+
+
+        <!--
+    <section>
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Sub-250g RC Airplane</h3>
+                <p>Designed and built a lightweight Slow Stick-inspired aircraft for endurance and portability.</p>
+            </div>
+            <div class="project">
+                <h3>Pneumatic Robot</h3>
+                <p>Developed a class project robot powered by pneumatics, showcasing control and actuation design.</p>
+            </div>
+            <div class="project">
+                <h3>Mission Performance Optimizer</h3>
+                <p>Built a MATLAB tool to optimize aircraft missions, balancing fuel, speed, and endurance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <p><strong>Software:</strong> MATLAB, SolidWorks, XFLR5, Python, C++</p>
+        <p><strong>Hardware:</strong> RC Aircraft, Arduino, Pneumatics, Prototyping</p>
+    </section>
+
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p>LinkedIn: <a href="#">linkedin.com/in/yourname</a></p>
+        <p>GitHub: <a href="#">github.com/yourusername</a></p>
+    </section>
+-->
+    </main>
+
+    <footer>
+        <p>Gavin Fujimoto | Engineering Portfolio</p>
+    </footer>
+
+</body>
+
+</html>

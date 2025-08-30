@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            /* 100% of viewport height */
+        }
+
+        main {
+            flex: 1;
+            /* grows to fill space between header/navbar and footer */
+            padding: 3rem 10%;
+        }
+
+        header {
+            background: #004080;
+            color: white;
+            padding: 2rem;
+            padding-bottom: 0rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        section {
+            padding: 3rem 10%;
+        }
+
+        h2 {
+            color: #004080;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            position: sticky;
+            /* keeps it in place even when scrolling */
+            top: 0;
+            /* stick to the top of the page */
+            left: 0;
+            /* start from the left edge */
+            width: 100%;
+            /* span full width */
+            background: #004080;
+            color: white;
+            padding: 1rem;
+            z-index: 1000;
+            /* ensures it stays above other content */
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul {
+            list-style: none;
+            /* remove bullets */
+            margin: 0;
+            /* remove default margin */
+            padding: 0;
+            /* remove default padding */
+            display: flex;
+            /* horizontal layout */
+            gap: 2rem;
+            /* space between links */
+        }
+
+        nav a {
+            color: white;
+        }
+
+        nav a.active {
+            font-weight: bold;
+            /* make the text bold */
+        }
+
+        .about,
+        .skills,
+        .contact,
+        .projects-wrapper {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project h3 {
+            margin-bottom:0rem;
+        }
+
+        .project h4 {
+            margin-bottom: 0.5rem;
+            font-style:italic;
+            font-weight:normal;
+        }
+
+        .project a {
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #004080;
+            color: white;
+        }
+
+        a {
+            color: #004080;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Gavin Fujimoto</h1>
+        <p>Aviation Enthusiast and Aerospace Engineer</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="projects-wrapper">
+            <h2>Team Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3><a href="AnteatAir.html">AnteatAir &ndash; 2024-2025 Design/Build/Fly Aircraft</a></h3>
+                    <h4>Project Manager</h4>
+                    <p>A 6-ft span RC aircraft for the 2024-2025 Design/Build/Fly competition in Tucson,
+                        Arizona.
+                        The aircraft was designed to meet challenging design criteria, including carrying wing-mounted
+                        payload and deploying an autonomous glider.</p>
+                </div>
+                <div class="project">
+                    <h3><a href="Rover.html">Pneumatic Rover</a></h3>
+                    <h4>Programming Lead</h4>
+                    <p>A rover propelled by a single pneumatic piston capable of precise navigation using feedback from an
+                        onboard encoder and magnetometer.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+        <section class="projects-wrapper">
+            <h2>Personal Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3><a href="The_Stick.html">The Stick &ndash; A Sub-250g Conventional RC Aircraft</a></h3>
+                    <p>A lightweight, Slow Stick-inspired aircraft built to comply with FAA regulations for park flying.
+                        The aircraft features a carbon fiber boom with foam wings and 3D-printed connections.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3><a href="The_Wing.html">The Wing &ndash; A Flying Wing RC Aircraft</a></h3>
+                    <p>A 3-ft span, sub-250g flying wing RC aircraft designed to push the limits of budget-friendly small-scale
+                        model aviation.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!---
+    <section class="skills">
+        <h2>Skills</h2>
+        <p><strong>Software:</strong> MATLAB, SolidWorks, XFLR5, Python, C++</p>
+        <p><strong>Hardware:</strong> RC Aircraft, Arduino, Pneumatics, Prototyping</p>
+    </section>
+
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p>LinkedIn: <a href="#">linkedin.com/in/yourname</a></p>
+        <p>GitHub: <a href="#">github.com/yourusername</a></p>
+    </section>
+-->
+
+    </main>
+    <footer>
+        <p>Gavin Fujimoto | Engineering Portfolio</p>
+    </footer>
+
+</body>
+
+</html>
