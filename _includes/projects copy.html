@@ -1,0 +1,31 @@
+<!--
+<section class="projects-section" id="projects">
+  <h2>Projects</h2>
+
+  <div class="projects-container">
+    {% assign sorted = site.projects | sort: "order" %}
+    {% for project in sorted %}
+      <div class="project">
+        <div class="project-text">
+          <h3>{{ project.title }}</h3>
+          <p class="project-summary">{{ project.summary }}</p>
+
+          {% if project.tools %}
+            <ul>
+              {% for tool in project.tools %}
+                <li>{{ tool }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+
+        {% if project.image %}
+          <div class="project-image">
+            <img src="{{project.image}}" alt='{{ project.title }}'>
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+-->

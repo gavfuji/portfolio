@@ -1,0 +1,168 @@
+.current {
+  color: green;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e5e5e5;
+
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 100;
+}
+
+.site-name {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+}
+
+.site-name:hover {
+  font-weight: 700;
+}
+
+.header-right a {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.header-right a:hover {
+  color: black;
+}
+
+.sep {
+  margin: 0 0.5rem;
+  color: #555;
+  user-select:none;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem 2rem;
+  border-top: 1px solid #e5e5e5;
+
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 100;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: black;
+}
+
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  background: #e5e5e5;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.project-text {
+  flex: 1 1 50%;
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.project-image {
+  flex: 1 1 40%;
+  max-width: 50rem;
+  display: flex;
+  align-items: center;   // vertical centering
+}
+
+
+.project-image img {
+  max-width: 100%;
+  max-height: 100%;         /* scales to text column height */
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.about-content {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-bullets {
+  flex: 0 0 auto;
+}
+
+.about-image {
+  flex: 0 0 auto;
+  display: flex;            /* use flex for centering inside this box */
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* optional: center vertically if container is taller */
+}
+
+.about-image img {
+  max-height: 35rem;
+  height: auto;              /* preserve aspect ratio */
+  max-width: 80%;            /* optional: prevent it from being too wide */
+  border-radius: 0.5rem;
+}
+
+.about-section {
+  margin: 1rem;
+  margin-bottom: 0;
+}
+
+.projects-section {
+  margin: 1rem;
+  margin-top: 0;
+}
+
+.header-image {
+  width: 100%;          /* full width */
+  max-height: 400px;    /* optional: constrain height */
+  object-fit: cover;    /* crop nicely if needed */
+  display: block;       /* remove inline spacing */
+  margin-bottom: 2rem;  /* spacing below image */
+  border-radius: 0.5rem;
+}
+
+.projects-compact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.project--compact .project-text {
+  flex: 1 1 20rem;
+}
+
+.project--compact .project-image {
+  flex: 1 1 16rem;
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+}
+
+.project--compact img {
+  height: auto;
+  width: 100%;
+  margin: 0;
+}

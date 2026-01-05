@@ -1,0 +1,56 @@
+<section class="projects-section" id="projects">
+  <h2>Projects</h2>
+
+  <div class="projects-container">
+    {% assign sorted = site.projects | sort: "order" %}
+    <div class="projects-featured">
+      {% for project in sorted %}
+        {% if project.featured %}
+          <div class="project">
+            <div class="project-text">
+              <h3>{{ project.title }}</h3>
+              {% if project.role %}
+              <em>{{ project.role }}</em>
+              {% endif %}
+              <p class="project-summary">{{ project.summary }}</p>
+
+              {% if project.specifications %}
+              <strong>Specifications:</strong>
+                <ul>
+                  {% for specification in project.specifications %}
+                    <li>{{ specification }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+
+            {% if project.image %}
+              <div class="project-image">
+                <img src="{{project.image}}" alt='{{ project.title }}'>
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <h4>Mini-Projects</h4>
+    <div class = "projects-compact">
+      {% for project in sorted %}
+        {% unless project.featured %}
+          <div class="project project--compact">
+            <div class="project-text">
+              <h3>{{ project.title }}</h3>
+              <p class="project-summary">{{ project.summary }}</p>
+            </div>
+
+            {% if project.image %}
+              <div class="project-image">
+                <img src="{{project.image}}" alt='{{ project.title }}'>
+              </div>
+            {% endif %}
+          </div>
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
