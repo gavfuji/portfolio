@@ -1,5 +1,6 @@
 ---
 title: Fume Extractor
+hidden: False
 year: 2025
 tools:
   - XFLR5
@@ -8,7 +9,7 @@ tools:
 summary: >
   A 3D-printed fume extractor designed in SolidWorks. Utilizes a computer fan lined with a carbon filter to remove soldering fumes. Includes a power switch and removable magnetic front panel to replace the filter.
 image: assets\images\Filter.jpg
-order: 5
+order: 7
 featured: False
 ---
 

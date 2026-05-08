@@ -1,5 +1,6 @@
 ---
 title: Slow-Flyer
+hidden: False
 role: Individual
 year: 2025
 tools:
@@ -7,13 +8,13 @@ tools:
   - Foamboard
   - SolidWorks
 summary: >
-  A budget-friendly sub-250g foamboard aircraft based on Slow Stik designs. Features a large wing area and KFM airfoil for gentle flight and stall characteristics. Sizing was performed by hand and experimentally, with a goal of achieving slow flight speeds for park flying.
+  The second iteration of a budget-friendly, sub-250g foamboard aircraft based on existing stick-plane designs. Sized for stable, low-speed flight with dihedral, configurable flaperons, and a heavily undercambered airfoil. Features fully modular, 3D-printed mounts for easy assembly and transportation.
 specifications:
-- "AUW: 0.52 lbs"
-- "wingspan: 36 in"
-- "chord: 9 in"
+- "AUW: 0.44 lbs"
+- "wingspan: 30 in"
+- "chord: 7 in"
 - "cruise speed: 15 ft/s"
-image: assets\images\Slow-Flyer.jpg
+image: assets\images\Slow-Flyer-2.jpg
 order: 5
 featured: True
 ---

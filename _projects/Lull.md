@@ -1,5 +1,6 @@
 ---
 title: Lull DLG by FlightPoint
+hidden: False
 role: Individual
 year: 2025
 tools:
@@ -7,7 +8,7 @@ tools:
   - Foamboard
   - SolidWorks
 summary: >
-  A kit discus launch glider (DLG) from Flightpoint. Constructed by hand from balsa and carbon fiber, with a lightweight covering. Powered by a 1S LiPo battery.
+  A discus launch glider (DLG) built using a kit from FlightPoint. Constructed by hand from balsa and carbon fiber with a lightweight plastic covering. Powered by a 1S LiPo battery.
 image: assets\images\Lull.jpg
 order: 2
 featured: False

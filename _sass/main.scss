@@ -73,7 +73,7 @@
   margin-bottom: 2rem;
   background: #e5e5e5;
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
 }
 
 .project-text {
@@ -81,6 +81,10 @@
   background: white;
   border-radius: 0.5rem;
   padding: 1rem;
+}
+
+.project-text h3 {
+  margin-bottom: 0;
 }
 
 .project-image {
@@ -106,8 +110,21 @@
   flex-wrap: wrap;
 }
 
+.about-bullets-container {
+  background: #e5e5e5;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
 .about-bullets {
   flex: 0 0 auto;
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.about-bullets li {
+  margin-bottom: 0.5rem;
 }
 
 .about-image {
@@ -118,7 +135,7 @@
 }
 
 .about-image img {
-  max-height: 35rem;
+  max-height: 60rem;
   height: auto;              /* preserve aspect ratio */
   max-width: 80%;            /* optional: prevent it from being too wide */
   border-radius: 0.5rem;

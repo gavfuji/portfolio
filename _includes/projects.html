@@ -5,12 +5,16 @@
     {% assign sorted = site.projects | sort: "order" %}
     <div class="projects-featured">
       {% for project in sorted %}
-        {% if project.featured %}
+        {% if project.featured and project.hidden != true %}
           <div class="project">
             <div class="project-text">
               <h3>{{ project.title }}</h3>
               {% if project.role %}
               <em>{{ project.role }}</em>
+              {% endif %}
+              <br>
+              {% if project.year %}
+              <em>{{ project.year }}</em>
               {% endif %}
               <p class="project-summary">{{ project.summary }}</p>
 
@@ -22,7 +26,29 @@
                   {% endfor %}
                 </ul>
               {% endif %}
+
+              {% if project.contributions %}
+              <strong>Key Contributions:</strong>
+                <ul>
+                  {% for contribution in project.contributions %}
+                    <li>{{ contribution }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+
+              {% if project.documentation %}
+              <strong>Documentation:</strong>
+                <ul>
+                  {% for document in project.documentation %}
+                    <li>  <a href="{{ document.url }}" target="_blank">
+                    {{ document.title }}
+                    </a></li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
             </div>
+
+
 
             {% if project.image %}
               <div class="project-image">
@@ -36,7 +62,7 @@
     <h4>Mini-Projects</h4>
     <div class = "projects-compact">
       {% for project in sorted %}
-        {% unless project.featured %}
+        {% unless project.featured or project.hidden == true %}
           <div class="project project--compact">
             <div class="project-text">
               <h3>{{ project.title }}</h3>
